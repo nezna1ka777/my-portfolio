@@ -17,7 +17,7 @@ function App() {
         {/* Фото */}
         <div className="resume-photo fade-in-left">
           <img
-            src="/photo.jpg"
+            src={`${import.meta.env.BASE_URL}photo.jpg`}
             alt="Фото"
             className="photo"
             style={{
@@ -56,7 +56,10 @@ function App() {
       </div>
 
       {/* Нижняя часть — резюме */}
-      <div className="resume-text fade-in-bottom" style={{ marginTop: "40px", fontSize: "18px", textAlign: "left" }}>
+      <div
+        className="resume-text fade-in-bottom"
+        style={{ marginTop: "40px", fontSize: "18px", textAlign: "left" }}
+      >
         <h3>Цель</h3>
         <p>
           Готов к обучению новым технологиям и инструментам, включая фреймворки,
@@ -70,8 +73,13 @@ function App() {
 
         <h3>Ключевые навыки</h3>
         <ul>
-          <li>Python — написание скриптов, автоматизация задач, работа с библиотеками</li>
-          <li>Microsoft Office (Word, Excel, PowerPoint) — продвинутый уровень</li>
+          <li>
+            Python — написание скриптов, автоматизация задач, работа с
+            библиотеками
+          </li>
+          <li>
+            Microsoft Office (Word, Excel, PowerPoint) — продвинутый уровень
+          </li>
           <li>Немецкий — B2 (свободное общение, чтение технической документации)</li>
           <li>Китайский — начальный уровень</li>
           <li>Анализ больших объёмов информации</li>
@@ -86,7 +94,9 @@ function App() {
           <li>Автоматизация задач для оптимизации процессов</li>
           <li>Бег — участие в любительских забегах</li>
           <li>Чтение профессиональной литературы</li>
-          <li>Достижение уровня B2 в немецком через курсы и практику</li>
+          <li>
+            Достижение уровня B2 в немецком через курсы и практику
+          </li>
         </ul>
       </div>
     </div>
