@@ -1,0 +1,114 @@
+/* === Подключение Tailwind === */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Глобальные стили === */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* === Блок резюме === */
+.resume-section {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(224, 87, 255, 0.4);
+}
+
+.resume-photo {
+  flex-shrink: 0;
+}
+
+.resume-photo .photo {
+  width: 200px;
+  height: 280px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.resume-text {
+  color: white;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.resume-text h3 {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #E057FF, #490050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-text a {
+  color: #E057FF;
+  text-decoration: none;
+}
+.resume-text a:hover {
+  text-decoration: underline;
+}
+
+/* === Анимации появления === */
+.hidden-on-scroll,
+.hidden-on-scroll-left {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 1s ease;
+}
+
+.hidden-on-scroll {
+  transform: translateY(30px);
+}
+.hidden-on-scroll-left {
+  transform: translateX(-30px);
+}
+
+.show-on-scroll,
+.show-on-scroll-left {
+  opacity: 1;
+  transform: translate(0, 0);
+  animation: glow-fade 1.5s ease forwards;
+}
+
+@keyframes glow-fade {
+  0% { box-shadow: 0 0 25px rgba(224, 87, 255, 0.9); }
+  100% { box-shadow: none; }
+}
+
+/* Задержки */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+.delay-9 { transition-delay: 0.9s; }
+
+/* === Адаптация под телефон === */
+@media (max-width: 768px) {
+  .resume-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

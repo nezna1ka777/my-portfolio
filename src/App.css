@@ -1,0 +1,152 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Основная секция резюме */
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(224, 87, 255, 0.4);
+}
+
+/* Фото */
+.resume-photo {
+  flex-shrink: 0;
+}
+
+.resume-photo .photo {
+  width: 300px;
+  height: 420px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Текст */
+.resume-text {
+  color: white;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.resume-text h3 {
+  margin-top: 20px;
+  background: linear-gradient(45deg, #E057FF, #490050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.resume-text ul {
+  padding-left: 20px;
+}
+
+.resume-text a {
+  color: #E057FF;
+  text-decoration: none;
+}
+
+.resume-text a:hover {
+  text-decoration: underline;
+}
+
+/* Анимации */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInBottom 1s ease forwards;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+  .resume-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume-photo {
+    justify-self: center;
+  }
+}
